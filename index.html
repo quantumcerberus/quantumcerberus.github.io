@@ -19,80 +19,18 @@
             background-color: #f9f9f9;
             padding-top: 20px;
         }
-
+        
         /* Header styles */
         header {
             background: linear-gradient(135deg, #3f87a6, #ebf8e1);
             color: white;
             text-align: center;
             padding: 60px 20px;
-            position: relative;
         }
-        
-        /* Stickman animation */
-        .stickman {
-            position: absolute;
-            top: 50%;
-            left: 10%;
-            width: 50px;
-            height: 100px;
-            background-color: transparent;
-            animation: stickmanAnimation 4s ease-in-out infinite;
-        }
-        .stickman::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 5px;
-            height: 50px;
-            background-color: black;
-            transform: translateX(-50%);
-        }
-        .stickman::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 5px;
-            height: 30px;
-            background-color: black;
-            transform: translateX(-50%) translateY(-100%);
-        }
-        
-        @keyframes stickmanAnimation {
-            0% {
-                left: 10%;
-            }
-            50% {
-                left: 45%;
-            }
-            100% {
-                left: 10%;
-            }
-        }
-
         header h1 {
             font-size: 3rem;
             margin-bottom: 10px;
-            position: relative;
-            z-index: 10;
-            color: #fff;
-            animation: moveTextToCenter 4s ease-in-out forwards;
         }
-        
-        @keyframes moveTextToCenter {
-            0% {
-                transform: translateX(-50%);
-            }
-            50% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
         header p {
             font-size: 1.2rem;
         }
@@ -183,7 +121,6 @@
 <body>
 
     <header>
-        <div class="stickman"></div>
         <img src="your-profile-image.jpg" alt="Sowrhoop Raaj B" class="profile-img">
         <h1>Sowrhoop Raaj B</h1>
         <p>Aspiring Cloud and AI/ML Engineer</p>
@@ -284,4 +221,4 @@
         <p>&copy; 2024 Sowrhoop Raaj B</p>
     </footer>
 </body>
-</html>
+            </html>

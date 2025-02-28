@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sowrhoop Raaj B - Aspiring Cloud and AI/ML Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Reset and General styles */
         * {
@@ -20,7 +21,7 @@
             padding-top: 20px;
             padding-bottom: 20px;
         }
-        
+
         /* Animations */
         @keyframes fadeIn {
             0% { opacity: 0; }
@@ -50,6 +51,22 @@
             font-size: 1.5rem;
             font-weight: 400;
             animation: slideInUp 1.5s ease-in-out;
+        }
+
+        /* Profile Image styles */
+        .profile-img {
+            border-radius: 50%;
+            max-width: 180px;
+            border: 6px solid #ff1493;
+            margin-top: 30px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+            animation: slideInUp 2s ease-in-out;
+        }
+
+        /* Hover effect for profile */
+        header .profile-img:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
         }
 
         /* Card styles */
@@ -88,10 +105,34 @@
             position: relative;
         }
         .card ul li::before {
-            content: "•";
+            content: "\u2022";
             color: #9400d3;
             position: absolute;
             left: -20px;
+        }
+
+        /* Progress Bars for Skills */
+        .progress-container {
+            width: 100%;
+            height: 30px;
+            background-color: #e0e0e0;
+            border-radius: 25px;
+            margin-bottom: 20px;
+        }
+        .progress-bar {
+            height: 100%;
+            text-align: center;
+            color: white;
+            border-radius: 25px;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #2c2c2c;
+            color: #fff;
+        }
+        body.dark-mode header {
+            background: linear-gradient(135deg, #006400, #003366, #004d40);
         }
 
         /* Links */
@@ -116,20 +157,11 @@
             animation: fadeIn 2s ease-in-out;
         }
 
-        /* Profile Image styles */
-        .profile-img {
-            border-radius: 50%;
-            max-width: 180px;
-            border: 6px solid #ff1493;
-            margin-top: 30px;
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-            animation: slideInUp 2s ease-in-out;
-        }
-
-        /* Hover effect for profile */
-        header .profile-img:hover {
-            transform: scale(1.1);
-            transition: transform 0.3s ease-in-out;
+        /* Section Dividers */
+        .section-divider {
+            height: 8px;
+            background: linear-gradient(135deg, #ff7f50, #ff1493, #9400d3);
+            margin: 50px 0;
         }
 
         /* Responsive styles */
@@ -141,29 +173,12 @@
                 padding: 30px 20px;
             }
         }
-
-        /* Section Dividers */
-        .section-divider {
-            height: 8px;
-            background: linear-gradient(135deg, #ff7f50, #ff1493, #9400d3);
-            margin: 50px 0;
-        }
-
-        /* Section card background color */
-        .card:nth-child(even) {
-            background-color: #f9fafa;
-        }
-
-        /* Additional margin for content sections */
-        .card + .card {
-            margin-top: 30px;
-        }
-
     </style>
 </head>
 <body>
 
     <header>
+        <img src="profile.jpg" alt="Sowrhoop Raaj B" class="profile-img">
         <h1>Sowrhoop Raaj B</h1>
         <p>Aspiring Cloud and AI/ML Engineer</p>
         <p>Skilled in Cloud Computing, Automation, Cybersecurity, and AI/ML</p>
@@ -183,106 +198,43 @@
     <div class="section-divider"></div>
 
     <div class="card">
-        <h2>Skill Highlights</h2>
-        <ul>
-            <li>Cloud Computing</li>
-            <li>Artificial Intelligence/Machine Learning</li>
-            <li>Cybersecurity</li>
-            <li>Automation & CI/CD Pipelines</li>
-            <li>Linux & Shell Scripting</li>
-            <li>Effective Communication & Collaboration</li>
-            <li>Innovative Problem Solving</li>
-        </ul>
-    </div>
-
-    <div class="section-divider"></div>
-
-    <div class="card">
-        <h2>Languages</h2>
-        <ul>
-            <li>Tamil: Native proficiency</li>
-            <li>English: Proficient</li>
-        </ul>
-    </div>
-
-    <div class="section-divider"></div>
-
-    <div class="card">
-        <h2>Computer Proficiency</h2>
-        <ul>
-            <li><strong>Programming:</strong> Bash, Python (Basics)</li>
-            <li><strong>OS:</strong> Linux, Windows, Android</li>
-            <li><strong>DevOps Tools:</strong> Git, Docker, Kubernetes</li>
-            <li><strong>Cybersecurity:</strong> Wireshark, Splunk, Iptables</li>
-            <li><strong>Cloud Platforms:</strong> AWS</li>
-            <li><strong>Virtualization:</strong> Libvirt, Xen, QEMU/KVM</li>
-        </ul>
-    </div>
-
-    <div class="section-divider"></div>
-
-    <div class="card">
-        <h2>Areas of Interest</h2>
-        <ul>
-            <li>Cloud Computing</li>
-            <li>Artificial Intelligence/Machine Learning</li>
-            <li>DevSecOps</li>
-            <li>Cybersecurity</li>
-        </ul>
+        <h2>Skills Highlights</h2>
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 80%; background-color: #ff1493;">Cloud Computing (80%)</div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 75%; background-color: #9400d3;">AI/ML (75%)</div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 70%; background-color: #ff7f50;">Cybersecurity (70%)</div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 85%; background-color: #1e90ff;">Automation & CI/CD (85%)</div>
+        </div>
     </div>
 
     <div class="section-divider"></div>
 
     <div class="card">
         <h2>Education</h2>
-        <div class="card">
-            <h3>B.E. Mechanical Engineering</h3>
-            <p>Thiagarajar College of Engineering (2024), 86.1%</p>
-        </div>
-        <div class="card">
-            <h3>HSC</h3>
-            <p>Mahatma CBSE School, CBSE (2020), 87%</p>
-        </div>
-        <div class="card">
-            <h3>SSLC</h3>
-            <p>CEOA Matriculation School, State Board (2018), 97.6%</p>
-        </div>
-    </div>
-
-    <div class="section-divider"></div>
-
-    <div class="card">
-        <h2>Personal Projects</h2>
-        <div class="card">
-            <h3>Cipherblue</h3>
-            <p>A secure, Linux-based OS for desktops, prioritizing stability and usability.</p>
-        </div>
-        <div class="card">
-            <h3>Ciphercore</h3>
-            <p>A secure, minimal Linux-based OS for servers, focused on minimizing the attack surface.</p>
-        </div>
-    </div>
-
-    <div class="section-divider"></div>
-
-    <div class="card">
-        <h2>Certifications</h2>
-        <div class="card">
-            <h3>Cybersecurity Specialization</h3>
-            <p>Google Cybersecurity Specialization (Coursera, Nov 2024)</p>
-        </div>
-        <div class="card">
-            <h3>AI Essentials</h3>
-            <p>Google AI Essentials (Coursera, Sep 2024)</p>
-        </div>
-        <div class="card">
-            <h3>AWS Certified Cloud Practitioner (CLF-C02)</h3>
-            <p>Currently pursuing (Expected Feb 2025)</p>
-        </div>
+        <h3>B.E. Mechanical Engineering</h3>
+        <p>Thiagarajar College of Engineering (2024), 86.1%</p>
+        <h3>HSC</h3>
+        <p>Mahatma CBSE School, CBSE (2020), 87%</p>
+        <h3>SSLC</h3>
+        <p>CEOA Matriculation School, State Board (2018), 97.6%</p>
     </div>
 
     <footer>
-        <p>&copy; 2025 Sowrhoop Raaj B</p>
+        <p>&copy; 2025 Sowrhoop Raaj B | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
+
+    <script>
+        // Dark mode toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
 </body>
 </html>

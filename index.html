@@ -20,22 +20,35 @@
             padding-top: 20px;
         }
         
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideInUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
         /* Header styles */
         header {
-            background: linear-gradient(135deg, #3f87a6, #ebf8e1);
+            background: linear-gradient(135deg, #ff6f91, #ff9671, #ffc75f, #f9f871);
             color: white;
             text-align: center;
             padding: 80px 20px;
             border-bottom: 8px solid #006666;
+            animation: fadeIn 2s ease-in-out;
         }
         header h1 {
             font-size: 3.5rem;
             margin-bottom: 10px;
             font-weight: 700;
+            animation: slideInUp 1s ease-in-out;
         }
         header p {
             font-size: 1.2rem;
             font-weight: 400;
+            animation: slideInUp 1.5s ease-in-out;
         }
 
         /* Card styles */
@@ -47,6 +60,7 @@
             border-radius: 10px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
+            animation: fadeIn 2s ease-in-out;
         }
         .card:hover {
             transform: translateY(-10px);
@@ -82,12 +96,12 @@
         /* Links */
         a {
             text-decoration: none;
-            color: #3f87a6;
+            color: #ff6f91;
             font-weight: 500;
         }
         a:hover {
             text-decoration: underline;
-            color: #ff6347;
+            color: #ffc75f;
         }
 
         /* Footer styles */
@@ -98,15 +112,17 @@
             padding: 20px;
             margin-top: 40px;
             font-size: 1rem;
+            animation: fadeIn 2s ease-in-out;
         }
 
         /* Profile Image styles */
         .profile-img {
             border-radius: 50%;
             max-width: 160px;
-            border: 5px solid #ff6347;
+            border: 5px solid #ff6f91;
             margin-top: 20px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            animation: slideInUp 2s ease-in-out;
         }
 
         /* Hover effect for profile */
@@ -128,7 +144,7 @@
         /* Section Dividers */
         .section-divider {
             height: 8px;
-            background: linear-gradient(135deg, #ff6347, #3f87a6);
+            background: linear-gradient(135deg, #ff6f91, #ff9671, #ffc75f, #f9f871);
             margin: 40px 0;
         }
 

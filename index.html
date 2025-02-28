@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sowrhoop Raaj B - Aspiring Cloud and AI/ML Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         /* Reset and General styles */
         * {
@@ -16,7 +16,7 @@
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f9f9f9;
+            background-color: #f0f4f7;
             padding-top: 20px;
         }
         
@@ -25,34 +25,42 @@
             background: linear-gradient(135deg, #3f87a6, #ebf8e1);
             color: white;
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px;
+            border-bottom: 8px solid #006666;
         }
         header h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 10px;
+            font-weight: 700;
         }
         header p {
             font-size: 1.2rem;
+            font-weight: 400;
         }
 
         /* Card styles */
         .card {
             max-width: 1000px;
             margin: 40px auto;
-            padding: 40px 20px;
+            padding: 40px 25px;
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-10px);
         }
         .card h2 {
-            font-size: 2rem;
-            border-bottom: 3px solid #3f87a6;
+            font-size: 2.5rem;
+            border-bottom: 3px solid #ff6347;
             padding-bottom: 8px;
             margin-bottom: 20px;
-            color: #3f87a6;
+            color: #ff6347;
+            font-weight: 600;
         }
         .card p, .card ul {
-            font-size: 1rem;
+            font-size: 1.1rem;
             margin-bottom: 15px;
             color: #555;
         }
@@ -66,7 +74,7 @@
         }
         .card ul li::before {
             content: "•";
-            color: #3f87a6;
+            color: #ff6347;
             position: absolute;
             left: -20px;
         }
@@ -75,9 +83,11 @@
         a {
             text-decoration: none;
             color: #3f87a6;
+            font-weight: 500;
         }
         a:hover {
             text-decoration: underline;
+            color: #ff6347;
         }
 
         /* Footer styles */
@@ -87,6 +97,22 @@
             text-align: center;
             padding: 20px;
             margin-top: 40px;
+            font-size: 1rem;
+        }
+
+        /* Profile Image styles */
+        .profile-img {
+            border-radius: 50%;
+            max-width: 160px;
+            border: 5px solid #ff6347;
+            margin-top: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover effect for profile */
+        header .profile-img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
         }
 
         /* Responsive styles */
@@ -95,15 +121,20 @@
                 font-size: 2.5rem;
             }
             .card {
-                padding: 30px 15px;
+                padding: 30px 20px;
             }
         }
 
-        /* Profile Picture Styles */
-        .profile-img {
-            border-radius: 50%;
-            max-width: 150px;
-            margin-top: 20px;
+        /* Section Dividers */
+        .section-divider {
+            height: 8px;
+            background: linear-gradient(135deg, #ff6347, #3f87a6);
+            margin: 40px 0;
+        }
+
+        /* Section card background color */
+        .card:nth-child(even) {
+            background-color: #f9fafc;
         }
     </style>
 </head>
@@ -116,6 +147,8 @@
         <p>Skilled in Cloud Computing, Automation, Cybersecurity, and AI/ML</p>
     </header>
 
+    <div class="section-divider"></div>
+
     <div class="card">
         <h2>About Me</h2>
         <p>Eager to apply my skills in a challenging role and contribute to innovative solutions, driving impactful results in a dynamic environment.</p>
@@ -125,6 +158,8 @@
         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sowrhoop" target="_blank">www.linkedin.com/in/sowrhoop</a></p>
         <p><strong>GitHub:</strong> <a href="https://github.com/quantumcerberus" target="_blank">github.com/quantumcerberus</a></p>
     </div>
+
+    <div class="section-divider"></div>
 
     <div class="card">
         <h2>Skill Highlights</h2>
@@ -139,6 +174,8 @@
         </ul>
     </div>
 
+    <div class="section-divider"></div>
+
     <div class="card">
         <h2>Languages</h2>
         <ul>
@@ -146,6 +183,8 @@
             <li>English: Proficient</li>
         </ul>
     </div>
+
+    <div class="section-divider"></div>
 
     <div class="card">
         <h2>Computer Proficiency</h2>
@@ -159,6 +198,8 @@
         </ul>
     </div>
 
+    <div class="section-divider"></div>
+
     <div class="card">
         <h2>Areas of Interest</h2>
         <ul>
@@ -169,6 +210,8 @@
         </ul>
     </div>
 
+    <div class="section-divider"></div>
+
     <div class="card">
         <h2>Education</h2>
         <ul>
@@ -177,6 +220,8 @@
             <li><strong>SSLC:</strong> CEOA Matric. School, State Board (2018), 97.6%</li>
         </ul>
     </div>
+
+    <div class="section-divider"></div>
 
     <div class="card">
         <h2>Personal Projects</h2>
@@ -189,6 +234,8 @@
             <p>A secure, minimal Linux-based OS for servers, focused on minimizing the attack surface.</p>
         </div>
     </div>
+
+    <div class="section-divider"></div>
 
     <div class="card">
         <h2>Certifications</h2>
@@ -207,7 +254,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Sowrhoop Raaj B</p>
+        <p>&copy; 2025 Sowrhoop Raaj B</p>
     </footer>
 </body>
-    </html>
+</html>

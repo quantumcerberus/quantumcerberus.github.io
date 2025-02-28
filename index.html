@@ -4,41 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sowrhoop Raaj B - Aspiring Cloud and AI/ML Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: sans-serif;
+        /* Reset and General styles */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding-top: 20px;
         }
+        
+        /* Header styles */
         header {
-            background-color: #f0f0f0;
-            padding: 20px;
+            background: linear-gradient(135deg, #3f87a6, #ebf8e1);
+            color: white;
             text-align: center;
+            padding: 60px 20px;
         }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Section styles */
         section {
+            max-width: 1000px;
+            margin: 40px auto;
             padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        section h2 {
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
+        h2 {
+            font-size: 2rem;
+            border-bottom: 3px solid #3f87a6;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: #3f87a6;
         }
-        .skills ul, .education ul, .projects ul, .certifications ul{
-            list-style-type: disc;
-            margin-left: 20px;
+        p, ul {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #555;
         }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+        ul li::before {
+            content: "•";
+            color: #3f87a6;
+            position: absolute;
+            left: -20px;
+        }
+
+        /* Links */
+        a {
+            text-decoration: none;
+            color: #3f87a6;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer styles */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            section {
+                padding: 30px 15px;
+            }
+        }
+
+        /* Profile Picture Styles */
+        .profile-img {
+            border-radius: 50%;
+            max-width: 150px;
+            margin-top: 20px;
+        }
+
+        /* Card styles for Projects and Certifications */
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            background-color: white;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
+
     <header>
+        <img src="your-profile-image.jpg" alt="Sowrhoop Raaj B" class="profile-img">
         <h1>Sowrhoop Raaj B</h1>
         <p>Aspiring Cloud and AI/ML Engineer</p>
         <p>Skilled in Cloud Computing, Automation, Cybersecurity, and AI/ML</p>
@@ -50,8 +133,8 @@
         <p><strong>Location:</strong> Madurai, India</p>
         <p><strong>Phone:</strong> +91 94428 92090</p>
         <p><strong>Email:</strong> <a href="mailto:sowrhoop.merro@silomails.com">sowrhoop.merro@silomails.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="www.linkedin.com/in/sowrhoop" target="_blank">www.linkedin.com/in/sowrhoop</a></p>
-        <p><strong>GitHub:</strong> <a href="github.com/quantumcerberus" target="_blank">github.com/quantumcerberus</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sowrhoop" target="_blank">www.linkedin.com/in/sowrhoop</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/quantumcerberus" target="_blank">github.com/quantumcerberus</a></p>
     </section>
 
     <section class="skills">
@@ -108,19 +191,30 @@
 
     <section class="projects">
         <h2>Personal Projects</h2>
-        <ul>
-            <li><strong>Cipherblue:</strong> A secure, Linux-based OS for desktops, prioritizing stability and usability.</li>
-            <li><strong>Ciphercore:</strong> A secure, minimal Linux-based OS for servers, focused on minimizing the attack surface.</li>
-        </ul>
+        <div class="card">
+            <h3>Cipherblue</h3>
+            <p>A secure, Linux-based OS for desktops, prioritizing stability and usability.</p>
+        </div>
+        <div class="card">
+            <h3>Ciphercore</h3>
+            <p>A secure, minimal Linux-based OS for servers, focused on minimizing the attack surface.</p>
+        </div>
     </section>
 
     <section class="certifications">
         <h2>Certifications</h2>
-        <ul>
-            <li><strong>Cybersecurity Specialization:</strong> Google Cybersecurity Specialization (Coursera, Nov 2024)</li>
-            <li><strong>AI Essentials:</strong> Google AI Essentials (Coursera, Sep 2024)</li>
-            <li><strong>AWS Certified Cloud Practitioner (CLF-C02):</strong> Currently pursuing (Expected Feb 2025)</li>
-        </ul>
+        <div class="card">
+            <h3>Cybersecurity Specialization</h3>
+            <p>Google Cybersecurity Specialization (Coursera, Nov 2024)</p>
+        </div>
+        <div class="card">
+            <h3>AI Essentials</h3>
+            <p>Google AI Essentials (Coursera, Sep 2024)</p>
+        </div>
+        <div class="card">
+            <h3>AWS Certified Cloud Practitioner (CLF-C02)</h3>
+            <p>Currently pursuing (Expected Feb 2025)</p>
+        </div>
     </section>
 
     <footer>

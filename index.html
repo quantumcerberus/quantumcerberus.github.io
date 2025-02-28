@@ -16,8 +16,9 @@
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f0f4f7;
+            background-color: #f4f6f9;
             padding-top: 20px;
+            padding-bottom: 20px;
         }
         
         /* Animations */
@@ -32,21 +33,21 @@
 
         /* Header styles */
         header {
-            background: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
+            background: linear-gradient(135deg, #ff7f50, #ff1493, #9400d3);
             color: white;
             text-align: center;
-            padding: 80px 20px;
-            border-bottom: 8px solid #006666;
+            padding: 100px 20px;
+            border-bottom: 8px solid #004d40;
             animation: fadeIn 2s ease-in-out;
         }
         header h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin-bottom: 10px;
             font-weight: 700;
             animation: slideInUp 1s ease-in-out;
         }
         header p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: 400;
             animation: slideInUp 1.5s ease-in-out;
         }
@@ -55,27 +56,27 @@
         .card {
             max-width: 1000px;
             margin: 40px auto;
-            padding: 40px 25px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
             animation: fadeIn 2s ease-in-out;
         }
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
         }
         .card h2 {
-            font-size: 2.5rem;
-            border-bottom: 3px solid violet;
-            padding-bottom: 8px;
+            font-size: 2.8rem;
+            border-bottom: 3px solid #ff1493;
+            padding-bottom: 12px;
             margin-bottom: 20px;
-            color: violet;
+            color: #9400d3;
             font-weight: 600;
         }
         .card p, .card ul {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
             color: #555;
         }
         .card ul {
@@ -83,12 +84,12 @@
             padding-left: 20px;
         }
         .card ul li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             position: relative;
         }
         .card ul li::before {
             content: "•";
-            color: violet;
+            color: #9400d3;
             position: absolute;
             left: -20px;
         }
@@ -96,12 +97,12 @@
         /* Links */
         a {
             text-decoration: none;
-            color: red;
+            color: #ff1493;
             font-weight: 500;
         }
         a:hover {
             text-decoration: underline;
-            color: violet;
+            color: #9400d3;
         }
 
         /* Footer styles */
@@ -111,30 +112,30 @@
             text-align: center;
             padding: 20px;
             margin-top: 40px;
-            font-size: 1rem;
+            font-size: 1.2rem;
             animation: fadeIn 2s ease-in-out;
         }
 
         /* Profile Image styles */
         .profile-img {
             border-radius: 50%;
-            max-width: 160px;
-            border: 5px solid red;
-            margin-top: 20px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            max-width: 180px;
+            border: 6px solid #ff1493;
+            margin-top: 30px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
             animation: slideInUp 2s ease-in-out;
         }
 
         /* Hover effect for profile */
         header .profile-img:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
             transition: transform 0.3s ease-in-out;
         }
 
         /* Responsive styles */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             .card {
                 padding: 30px 20px;
@@ -144,14 +145,20 @@
         /* Section Dividers */
         .section-divider {
             height: 8px;
-            background: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
-            margin: 40px 0;
+            background: linear-gradient(135deg, #ff7f50, #ff1493, #9400d3);
+            margin: 50px 0;
         }
 
         /* Section card background color */
         .card:nth-child(even) {
-            background-color: #f9fafc;
+            background-color: #f9fafa;
         }
+
+        /* Additional margin for content sections */
+        .card + .card {
+            margin-top: 30px;
+        }
+
     </style>
 </head>
 <body>
@@ -272,4 +279,4 @@
         <p>&copy; 2025 Sowrhoop Raaj B</p>
     </footer>
 </body>
-    </html>
+</html>

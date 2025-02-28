@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sowrhoop Raaj B is an aspiring Cloud and AI/ML engineer skilled in Cloud Computing, AI, and Cybersecurity.">
+    <meta property="og:title" content="Sowrhoop Raaj B - Aspiring Cloud and AI/ML Engineer">
+    <meta property="og:description" content="Sowrhoop Raaj B is an aspiring Cloud and AI/ML engineer skilled in Cloud Computing, AI, and Cybersecurity.">
+    <meta property="og:image" content="your-profile-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Sowrhoop Raaj B - Aspiring Cloud and AI/ML Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -20,7 +25,7 @@
             padding-top: 20px;
             padding-bottom: 20px;
         }
-        
+
         /* Animations */
         @keyframes fadeIn {
             0% { opacity: 0; }
@@ -52,6 +57,22 @@
             animation: slideInUp 1.5s ease-in-out;
         }
 
+        /* Profile Image styles */
+        .profile-img {
+            border-radius: 50%;
+            max-width: 180px;
+            border: 6px solid #ff1493;
+            margin-top: 30px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+            animation: slideInUp 2s ease-in-out;
+        }
+
+        /* Hover effect for profile */
+        header .profile-img:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
         /* Card styles */
         .card {
             max-width: 1000px;
@@ -65,6 +86,7 @@
         }
         .card:hover {
             transform: translateY(-15px);
+            box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
         }
         .card h2 {
             font-size: 2.8rem;
@@ -88,7 +110,7 @@
             position: relative;
         }
         .card ul li::before {
-            content: "•";
+            content: "\u2022";
             color: #9400d3;
             position: absolute;
             left: -20px;
@@ -114,22 +136,6 @@
             margin-top: 40px;
             font-size: 1.2rem;
             animation: fadeIn 2s ease-in-out;
-        }
-
-        /* Profile Image styles */
-        .profile-img {
-            border-radius: 50%;
-            max-width: 180px;
-            border: 6px solid #ff1493;
-            margin-top: 30px;
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-            animation: slideInUp 2s ease-in-out;
-        }
-
-        /* Hover effect for profile */
-        header .profile-img:hover {
-            transform: scale(1.1);
-            transition: transform 0.3s ease-in-out;
         }
 
         /* Responsive styles */
@@ -159,11 +165,16 @@
             margin-top: 30px;
         }
 
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
 
     <header>
+        <img src="your-profile-image.jpg" alt="Sowrhoop Raaj B" class="profile-img">
         <h1>Sowrhoop Raaj B</h1>
         <p>Aspiring Cloud and AI/ML Engineer</p>
         <p>Skilled in Cloud Computing, Automation, Cybersecurity, and AI/ML</p>
@@ -281,8 +292,10 @@
         </div>
     </div>
 
+    <div class="section-divider"></div>
+
     <footer>
-        <p>&copy; 2025 Sowrhoop Raaj B</p>
+        <p>&copy; 2025 Sowrhoop Raaj B | Follow me on <a href="https://twitter.com/sowrhoop">Twitter</a> | <a href="https://github.com/quantumcerberus">GitHub</a></p>
     </footer>
 </body>
 </html>

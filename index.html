@@ -3,102 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sowrhoop Raaj B - Aspiring Cloud and AI/ML Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
-    <link rel="stylesheet" href="index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and General styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f4f7;
+            padding-top: 20px;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideInUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Header styles */
+        header {
+            background: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 8px solid #006666;
+            animation: fadeIn 2s ease-in-out;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            animation: slideInUp 1s ease-in-out;
+        }
+        header p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            animation: slideInUp 1.5s ease-in-out;
+        }
+
+        /* Card styles */
+        .card {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card h2 {
+            font-size: 2.5rem;
+            border-bottom: 3px solid violet;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: violet;
+            font-weight: 600;
+        }
+        .card p, .card ul {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .card ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .card ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .card ul li::before {
+            content: "•";
+            color: violet;
+            position: absolute;
+            left: -20px;
+        }
+
+        /* Links */
+        a {
+            text-decoration: none;
+            color: red;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: violet;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 1rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Profile Image styles */
+        .profile-img {
+            border-radius: 50%;
+            max-width: 160px;
+            border: 5px solid red;
+            margin-top: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            animation: slideInUp 2s ease-in-out;
+        }
+
+        /* Hover effect for profile */
+        header .profile-img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .card {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Section Dividers */
+        .section-divider {
+            height: 8px;
+            background: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
+            margin: 40px 0;
+        }
+
+        /* Section card background color */
+        .card:nth-child(even) {
+            background-color: #f9fafc;
+        }
+    </style>
 </head>
 <body>
-    <div id="loading">
-        <div id="spinner"></div>
-    </div>
-    <div id="profile">
-        <div id="profile_img"><img src="your-profile-image.jpg" alt="Sowrhoop Raaj B" class="profile-img"></div>
-        <div id="username">
-            <div id="fullname">Sowrhoop Raaj B</div>
-        </div>
-        <div id="userbio">Aspiring Cloud and AI/ML Engineer</div>
-        <div id="about">Skilled in Cloud Computing, Automation, Cybersecurity, and AI/ML</div>
-    </div>
-    <div id="display">
-        <div id="work">
-            <h1>Work.</h1>
-            <div class="projects" id="work_section"></div>
-        </div>
-        <div id="forks" style="display:none;">
-            <h1>Forks.</h1>
-            <div class="projects" id="forks_section"></div>
-        </div>
-        <div id="blog_section">
-            <h1>Blog.</h1>
-            <div id="blogs"></div>
-        </div>
-        <div id="footer">
-            <a href="https://github.com/quantumcerberus" target="_blank">made on earth by a human</a>
-        </div>
-    </div>
-    <script type="text/javascript">
-        setTimeout(function() {
-            document.getElementById("loading").classList.add("animated");
-            document.getElementById("loading").classList.add("fadeOut");
-            setTimeout(function() {
-                document.getElementById("loading").classList.remove("animated");
-                document.getElementById("loading").classList.remove("fadeOut");
-                document.getElementById("loading").style.display = "none";
-            }, 800);
-        }, 1500);
-        $.getJSON("blog.json", function(blog) {
-            blog = blog || [];
-            if (blog.length == 0) {
-                return (document.getElementById("blog_section").style.display = "none");
-            }
-            for (var i = 0; i < blog.length; i++) {
-                $("#blogs").append(`
-                    <a href="./blog/${blog[i].url_title}/" target="_blank">
-                        <section>
-                            <img src="./blog/${blog[i].url_title}/${blog[i].top_image}">
-                            <div class="blog_container">
-                                <div class="section_title">${blog[i].title}</div>
-                                <div class="about_section">
-                                    ${blog[i].sub_title}
-                                </div>
-                            </div>
-                        </section>
-                    </a>
-                `);
-            }
-        }).fail(function() {
-            return (document.getElementById("blog_section").style.display = "none");
-        });
-    </script>
-    <script>
-        const magicProjectsGrid = new MagicGrid({
-            container: "#work_section",
-            animate: false,
-            gutter: 30,
-            static: true,
-            useMin: false,
-            maxColumns: 2,
-            useTransform: true
-        });
 
-        const magicForksGrid = new MagicGrid({
-            container: "#forks_section",
-            animate: false,
-            gutter: 30,
-            static: true,
-            useMin: false,
-            maxColumns: 2,
-            useTransform: true
-        });
+    <header>
+        <img src="your-profile-image.jpg" alt="Sowrhoop Raaj B" class="profile-img">
+        <h1>Sowrhoop Raaj B</h1>
+        <p>Aspiring Cloud and AI/ML Engineer</p>
+        <p>Skilled in Cloud Computing, Automation, Cybersecurity, and AI/ML</p>
+    </header>
 
-        $("document").ready(() => {
-            magicProjectsGrid.listen();
-            magicForksGrid.listen();
-        });
-    </script>
+    <div class="section-divider"></div>
+
+    <div class="card">
+        <h2>About Me</h2>
+        <p>Eager to apply my skills in a challenging role and contribute to innovative solutions, driving impactful results in a dynamic environment.</p>
+        <p><strong>Location:</strong> Madurai, India</p>
+        <p><strong>Phone:</strong> +91 94428 92090</p>
+        <p><strong>Email:</strong> <a href="mailto:sowrhoop.merro@silomails.com">sowrhoop.merro@silomails.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sowrhoop" target="_blank">www.linkedin.com/in/sowrhoop</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/quantumcerberus" target="_blank">github.com/quantumcerberus</a></p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="card">
+        <h2>Skill Highlights</h2>
+        <ul>
+            <li>Cloud Computing</li>
+            <li>Artificial Intelligence/Machine Learning</li>
+            <li>Cybersecurity</li>
+            <li>Automation & CI/CD Pipelines</li>
+            <li>Linux & Shell Scripting</li>
+            <li>Effective Communication & Collaboration</li>
+            <li>Innovative Problem Solving</li>
+        </ul>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="card">
+        <h2>Languages</h2>
+        <ul>
+            <li>Tamil: Native proficiency</li>
+            <li>English: Proficient</li>
+        </ul>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="card">
+        <h2>Computer Proficiency</h2>
+        <ul>
+            <li><strong>Programming:</strong> Bash, Python (Basics)</li>
+            <li><strong>OS:</strong> Linux, Windows, Android</li>
+            <li><strong>DevOps Tools:</strong> Git, Docker, Kubernetes</li>
+            <li><strong>Cybersecurity:</strong> Wireshark, Splunk, Iptables</li>
+            <li><strong>Cloud Platforms:</strong> AWS</li>
+            <li><strong>Virtualization:</strong> Libvirt, Xen, QEMU/KVM</li>
+        </ul>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="card">
+        <h2>Areas of Interest</h2>
+        <ul>
+            <li>Cloud Computing</li>
+            <li>Artificial Intelligence/Machine Learning</li>
+            <li>DevSecOps</li>
+            <li>Cybersecurity</li>
+        </ul>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="card">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>B.E. Mechanical Engineering:</strong> Thiagarajar College of Engineering, Anna University (2024), CGPA: 8.61</li>
+            <li><strong>HSC:</strong> Mahatma CBSE School, CBSE (2020), 87%</li>
+            <li><strong>SSLC:</strong> CEOA Matric. School, State Board (2018), 97.6%</li>
+        </ul>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="card">
+        <h2>Personal Projects</h2>
+        <div class="card">
+            <h3>Cipherblue</h3>
+            <p>A secure, Linux-based OS for desktops, prioritizing stability and usability.</p>
+        </div>
+        <div class="card">
+            <h3>Ciphercore</h3>
+            <p>A secure, minimal Linux-based OS for servers, focused on minimizing the attack surface.</p>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="card">
+        <h2>Certifications</h2>
+        <div class="card">
+            <h3>Cybersecurity Specialization</h3>
+            <p>Google Cybersecurity Specialization (Coursera, Nov 2024)</p>
+        </div>
+        <div class="card">
+            <h3>AI Essentials</h3>
+            <p>Google AI Essentials (Coursera, Sep 2024)</p>
+        </div>
+        <div class="card">
+            <h3>AWS Certified Cloud Practitioner (CLF-C02)</h3>
+            <p>Currently pursuing (Expected Feb 2025)</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sowrhoop Raaj B</p>
+    </footer>
 </body>
-</html>
+    </html>
